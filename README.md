@@ -2,7 +2,11 @@
 
 Linkify makes it possible to list all records from specific models in a grouped_options_for_select array. This can by very useful for internal linking. It doesn't return absolute or relative paths, but instead gives you a pointer to the model name and identifier (usually ID) of a record, so **you'll have to create your own logic for saving this information serialized and a helper method to generate links from it afterwards**.
 
-This gem integrates easily with any Rails app using ActiveRecord.
+### Why is this better than saving a path as a string in the database?
+Because sometimes your path's change, due to your logic or due to internationlization.
+
+### So this won't work right out of the box?
+Nope, you'll have to write some code yourself to save the data. We suggest to save it serialized. And perhaps you want to write a helper method te regenerate links from the saved data.
 
 ## Installation
 
@@ -29,7 +33,7 @@ Or install it yourself as:
     </select>
 ## Usage
 
-Want to add a 'link to page' drop down in a form, simply call the `internal_links` method for the options_for_select parameter. It requires the current value as a parameter.
+Want to add a 'link to page' drop down in a form? Simply call the `internal_links` method for the options_for_select parameter. It requires the current value as a parameter.
 
 Example:
 
