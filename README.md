@@ -29,12 +29,12 @@ Or install it yourself as:
     </select>
 ## Usage
 
-Want to add a 'link to page' drop down in a form, simply call the `internal_links` method for the options_for_select parameter.
+Want to add a 'link to page' drop down in a form, simply call the `internal_links` method for the options_for_select parameter. It requires the current value as a parameter.
 
 Example:
 
     <%= form_for @link do |f| %>
-      <%= f.select :url_options, internal_links %>
+      <%= f.select :url_options, internal_links(@link.url_options) %>
       ...
       <%= f.submit %>
     <% end %>
@@ -58,12 +58,12 @@ It takes three parameters:
 ## Add extra pages (static pages for example)
 Sometimes you want to not only list records from the database, but also static pages: home, contact, about, etc. To add these to the `<select>` too, you can pass them as a parameter to the `internal_links` method:
   
-    <%= select_tag "url", internal_links([["contact", "/contact"], ["about", "/about"]]) %>
+    <%= f.select :url_options, internal_links(@link.url_options, [["contact", "/contact"], ["about", "/about"]]) %>
     
 I don't like to link to URL's directly but prefer to link to a Rails helper method instead. For example:
     
     # in the form
-    <%= select_tag "path", internal_links([["contact", "contact_path"], ["about", "about_path"]]) %>
+    <%= f.select :url_options, internal_links(@link.url_options, [["contact", "contact_path"], ["about", "about_path"]]) %>
     
     # in the place I need to show this link
     <%= link_to @link.name, send(@link.path)%>

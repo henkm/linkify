@@ -5,8 +5,8 @@ module Linkify
     
     
     # renders a select
-    def internal_links(additional_pages=[])
-      grouped_options_for_select(grouped_options(additional_pages))
+    def internal_links(current_object, additional_pages=[])
+      grouped_options_for_select(grouped_options(additional_pages), current_object)
     end
     
     def all_models
