@@ -68,6 +68,9 @@ I don't like to link to URL's directly but prefer to link to a Rails helper meth
     # in the place I need to show this link
     <%= link_to @link.name, send(@link.path)%>
 
+## Sponsor
+This gem is made by the smart people of [Eskes Media](http://www.eskesmedia.nl/ "Eskes Media").
+
 ## Contributing
 
 1. Fork it
@@ -75,3 +78,5 @@ I don't like to link to URL's directly but prefer to link to a Rails helper meth
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
