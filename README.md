@@ -44,12 +44,16 @@ Example:
 By default, no records will return if you call this method. For each model you want to list, you have to add this method to the model:
 
     linkable_by :title, :id
+
+or, to not show only a selection of records:
+
+    linkable_by :title, :id, limit(10)
     
-It takes two parameters:
+It takes three parameters:
 
 1. the name you'll see in the `<option>`
 2. the value that will be in the `<option>`
-3. the find method to select records from this model (defaults to `all` but could also be a (named) scope or custom method)
+3. the collection of records from this model (defaults to `all` but could also be a (named) scope or custom method)
   
 ## Add extra pages (static pages for example)
 Sometimes you want to not only list records from the database, but also static pages: home, contact, about, etc. To add these to the `<select>` too, you can pass them as a parameter to the `internal_links` method:
