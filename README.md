@@ -1,6 +1,6 @@
 # Linkify
 
-Linkify makes it possible to list all records from specific models in a grouped_options_for_select array. This can by very useful for internal linking. It doesn't return absolute or relative paths by default, but instead gives you the model name and identifier (usually ID) of a record, so you'll have to create your own logic for generating links from this information afterwards.
+Linkify makes it possible to list all records from specific models in a grouped_options_for_select array. This can by very useful for internal linking. It doesn't return absolute or relative paths, but instead gives you a pointer to the model name and identifier (usually ID) of a record, so **you'll have to create your own logic for saving this information serialized and a helper method to generate links from it afterwards**.
 
 This gem integrates easily with any Rails app using ActiveRecord.
 
