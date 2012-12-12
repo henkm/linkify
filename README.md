@@ -8,7 +8,7 @@ This gem integrates easily with any Rails app using ActiveRecord.
 
 Add this line to your application's Gemfile:
 
-    gem 'Linkify'
+    gem 'linkify'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Linkify
+    $ gem install linkify
 
 ## Example output
     <select>
