@@ -49,7 +49,7 @@ By default, no records will return if you call this method. For each model you w
 
     linkable_by :title, :id
 
-or, to not show only a selection of records:
+or, to show only a selection of records:
 
     linkable_by :title, :id, limit(10)
     
